@@ -95,13 +95,13 @@ def parse_date_time(query: str) -> dict:
     - Simple references: "today", "now", "current", "this moment", "tomorrow", "next day", "yesterday", "last day"
     - Week references: "this weekend", "saturday", "sunday", "last week", "next week"
     - Days ago: "X days ago" (e.g., "3 days ago")
-    - Partial dates: "Month Day" (e.g., "May 1"), "Month Day–Day" (e.g., "May 1–3"), "Month Day to Day" (e.g., "May 1 to 3")
+    - Partial dates: "Month Day" (e.g., "May 1"), "Month Day-Day" (e.g., "May 1-3"), "Month Day to Day" (e.g., "May 1 to 3")
     - Time references: "morning", "afternoon", "evening", "night", "9 AM", "7 PM"
     
     NOT SUPPORTED: Complex date math, specific dates with years (e.g., "May 1, 2024"), arithmetic like "X days earlier"
     
     Args:
-        query: Natural language date/time reference (e.g., "tomorrow", "May 1–3", "3 days ago")
+        query: Natural language date/time reference (e.g., "tomorrow", "May 1-3", "3 days ago")
         
     Returns:
         dict: Parsed date and time information with start_date, end_date, time_range
